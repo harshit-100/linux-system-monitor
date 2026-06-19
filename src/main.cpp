@@ -3,10 +3,12 @@
 
 int main()
 {
-    std::cout << "Linux System Monitor\n";
-
     CPU cpu;
-    cpu.printStats();
+
+    std::cout << "Linux System Monitor\n";
+    std::cout << "CPU Usage: "
+              << cpu.getUsage()
+              << "%\n";
 
     return 0;
 }

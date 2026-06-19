@@ -4,7 +4,7 @@
 class CPU
 {
 public:
-    void printStats();
+    double getUsage();
 };
 
 #endif
