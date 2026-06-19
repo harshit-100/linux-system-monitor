@@ -3,10 +3,10 @@
 
 int main()
 {
-    std::cout << "Linux System Monitor" << std::endl;
+    std::cout << "Linux System Monitor\n";
 
     CPU cpu;
-    cpu.printInfo();
+    cpu.printStats();
 
     return 0;
 }
