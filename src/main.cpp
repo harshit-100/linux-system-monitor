@@ -2,11 +2,13 @@
 
 #include "cpu.h"
 #include "memory.h"
+#include "process.h"
 
 int main()
 {
     CPU cpu;
     Memory memory;
+    Process process;
 
     std::cout << "Linux System Monitor\n\n";
 
@@ -17,6 +19,10 @@ int main()
     std::cout << "Memory Usage: "
               << memory.getUsage()
               << "%\n";
+
+    std::cout << "Processes: "
+          << process.getProcessCount()
+          << '\n';
 
     return 0;
 }
