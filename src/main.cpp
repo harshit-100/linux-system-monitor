@@ -1,4 +1,6 @@
+#include <chrono>
 #include <iostream>
+#include <thread>
 
 #include "cpu.h"
 #include "memory.h"
@@ -10,19 +12,27 @@ int main()
     Memory memory;
     Process process;
 
-    std::cout << "Linux System Monitor\n\n";
+    while (true)
+    {
+        system("clear");
 
-    std::cout << "CPU Usage: "
-              << cpu.getUsage()
-              << "%\n";
+        std::cout << "Linux System Monitor\n\n";
 
-    std::cout << "Memory Usage: "
-              << memory.getUsage()
-              << "%\n";
+        std::cout << "CPU Usage    : "
+                  << cpu.getUsage()
+                  << "%\n";
 
-    std::cout << "Processes: "
-          << process.getProcessCount()
-          << '\n';
+        std::cout << "Memory Usage : "
+                  << memory.getUsage()
+                  << "%\n";
+
+        std::cout << "Processes    : "
+                  << process.getProcessCount()
+                  << "\n";
+
+        std::this_thread::sleep_for(
+            std::chrono::seconds(1));
+    }
 
     return 0;
 }
