@@ -11,4 +11,5 @@ add_executable(
     system_monitor
     src/main.cpp
     src/cpu.cpp
+    src/memory.cpp
 )
